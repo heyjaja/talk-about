@@ -1,4 +1,4 @@
-package com.talk.about.web.hello.dto;
+package com.talk.about.web.dto;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,6 @@
-package com.talk.about.web.hello;
+package com.talk.about.web;
 
-import com.talk.about.web.hello.dto.HelloResponseDto;
+import com.talk.about.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

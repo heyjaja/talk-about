@@ -1,4 +1,4 @@
-package com.talk.about.web.hello;
+package com.talk.about.web;
 
 
 import org.junit.jupiter.api.Test;
