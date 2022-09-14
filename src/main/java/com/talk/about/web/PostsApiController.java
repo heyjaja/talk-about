@@ -1,11 +1,14 @@
 package com.talk.about.web;
 
 import com.talk.about.service.posts.PostsService;
+import com.talk.about.web.dto.PostsListResponseDto;
 import com.talk.about.web.dto.PostsResponseDto;
 import com.talk.about.web.dto.PostsSavsRequestDto;
 import com.talk.about.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -27,4 +30,5 @@ public class PostsApiController {
     public PostsResponseDto findById (@PathVariable Long id) {
         return postsService.findById(id);
     }
+
 }
