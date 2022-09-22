@@ -37,6 +37,17 @@ public class PostsService {
         return id;
     }
 
+    // 글삭제
+    @Transactional
+    public Long delete(Long id) {
+        Posts post = postsRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
+
+        postsRepository.delete(post); // deleteById()를 이용하면 id로 삭제 가능
+
+        return id;
+    }
+
     // 글조회
     public PostsResponseDto findById(Long id) {
         Posts entity = postsRepository.findById(id).orElseThrow(
@@ -52,4 +63,5 @@ public class PostsService {
                 .map(PostsListResponseDto::new) // ==.map(posts -> new PostsListResponseDto(posts))
                 .collect(Collectors.toList());
     }
+
 }
