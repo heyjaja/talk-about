@@ -30,10 +30,13 @@ const main = {
             },
         body: JSON.stringify(data),
         })
-        .then((data)=> {
-        alert("글이 등록되었습니다.");
-        window.location.href ='/';})
-        .catch((error) => alert(JSON.stringify(error)))
+        .then((response)=> {
+            if(!response.ok) {
+              throw new Error(`${response.status} 에러 발생`)
+            }
+            alert("글이 등록되었습니다.");
+            window.location.href ='/';})
+        .catch((error) => alert(error))
     },
     update : async function() {
         const data = {

@@ -6,6 +6,12 @@ spring:
         dialect: org.hibernate.dialect.MySQL57Dialect
         storage_engine: innodb
 
+  profiles:
+    include: oauth
+
+  session:
+    store-type: jdbc
+
   datasource:
     hikari:
       jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
