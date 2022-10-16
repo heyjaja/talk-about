@@ -23,6 +23,6 @@ class IndexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("스프링 부트로 게시판 만들기");
+        assertThat(body).contains("Talk About");
     }
 }
